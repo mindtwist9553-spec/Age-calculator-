@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Animation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background-color: #ff9800;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      color: white;
+      z-index: 1000;
+      animation: slideDown 0.5s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .content {
+      height: 2000px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticky-header">
+    Sticky Animation Header
+  </div>
+
+  <div class="content">
+    Scroll down to see the sticky effect.
+  </div>
+
+</body>
+</html>
